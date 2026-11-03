@@ -21,6 +21,10 @@
             }
         }
     </script>
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050505">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body class="bg-slate-950 text-slate-100 h-full flex flex-col min-h-screen">
 
@@ -407,6 +411,11 @@
             document.body.removeChild(a);
             showToast("Berkas video berhasil diunduh!");
         }
+    </script>
+    <script>
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("./sw.js");
+}
     </script>
 </body>
 </html>
